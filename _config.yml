@@ -10,10 +10,10 @@
 locale                   : "en-US"
 title                    : Hugo Mazzali
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : hlm89@cornell.edu
 name                     : Hugo Mazzali
 description              : Hugo Mazzali - Projects and CV 
-baseurl                  : "" # Set this to your repo name 
+baseurl                  : "https://github.com/Cornell-MAE-UG/fa25-portfolio-hugo-mazzali.git" # Set this to your repo name 
 
 # Theme and Style
 theme: jekyll-theme-minimal
