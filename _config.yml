@@ -13,7 +13,7 @@ title_separator          : "-"
 subtitle                 : hlm89@cornell.edu
 name                     : Hugo Mazzali
 description              : Hugo Mazzali - Projects and CV 
-baseurl                  : "https://github.com/Cornell-MAE-UG/fa25-portfolio-hugo-mazzali.git" # Set this to your repo name 
+baseurl                  : "/fa25-portfolio-hugo-mazzali" # Set this to your repo name 
 
 # Theme and Style
 theme: jekyll-theme-minimal
