@@ -1,15 +1,19 @@
 ---
 layout: project
-title: System Dynamics Final Project
-description: Control laws in non-linear and higher order systems 
-technologies: [Thermodynamics]
-image: /assets/images/heat_exchanger.jpeg
+title: Fluid Dynamics
+description: Dissection and analysis of a sonic humidifier 
+technologies: [Fluid Dynamics]
+image: /assets/images/Pipe.jpeg
 ---
 
-For my thermodynamics course ENGRD 2210, I had analyzed a water-water heat exchanger that transfers thermal energy from a hot water stream to a cold water stream without mixing the two fluids. An immersion heater maintains a hot water reservoir, while an insulated cooler is the cold resevoir. Each Resevoir has a pump that drives water through one of the two internal flow passages of the heat exchanger
+In a group of 4, I dissected and analyzed the fluid mechanical operation system of a sonic humidifier. We created a short video summary of our findings and analysis you can watch here [make this a link].
 
-The hot stream enters the heat exchanger at high temperature, flows along its passages, and exits at a lower temperature. The cold steam does the same but exits at a higher temperature. 
+My focus on this project was understanding how the speaker allowed for moisture to be added to the air without heating.
 
-We analyzed two different heat exchanger set ups: Parallel flow and Cross flow. 
+What my research showed was that the speaker vibrated at a frequency between 1 and 3 MHz, which would create unstable, standing waves. These waves break at their crest and create little droplets that are a few micrometers in diameter. Me and another group member performed the calculations below to understand how these droplets were able to rise by relating the drag force on the droplets and the velocity of the air around them. Many assumptions were made for these calculations since we lacked precise measuring equipment. 
 
-![Heat Exchanger Diagram and Calculations]({{ "/assets/images/heat_exchanger_diagram.png" | relative_url }}){: .inline-image-r style="width: 200px"}
+![Droplet Calculations]({{ "/assets/images/droplet_calculations.png" | relative_url }}){: .inline-image-l style="width: 400px"}
+
+![System Overview]({{ "/assets/images/system_overview.png" | relative_url }}){: .inline-image-r style="width: 400px"}
+
+<div style="clear: both;"></div>

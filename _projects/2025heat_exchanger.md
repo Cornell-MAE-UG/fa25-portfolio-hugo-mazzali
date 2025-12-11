@@ -13,3 +13,5 @@ The hot stream enters the heat exchanger at high temperature, flows along its pa
 We analyzed two different heat exchanger set ups: Parallel flow and Cross flow. 
 
 ![Heat Exchanger Diagram and Calculations]({{ "/assets/images/heat_exchanger_diagram.png" | relative_url }}){: .inline-image-r style="width: 400px"}
+
+<div style="clear: both;"></div>

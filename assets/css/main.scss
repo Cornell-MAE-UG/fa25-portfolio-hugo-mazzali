@@ -8,3 +8,131 @@ $color_scheme: '{{ site.color_scheme }}';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 @import "custom";
 
+.project-row {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.project-row .project-text {
+  flex: 0 0 60%;           /* text gets ~60% of the width */
+  font-size: 1.25rem;      /* bump size a bit */
+  line-height: 1.5;
+}
+
+.project-row .project-image {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.project-row .project-image img {
+  width: 150%;             /* fill its column */
+  max-width: 700px;        /* cap so it doesn’t get absurdly huge */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-row .project-text,
+  .project-row .project-image {
+    flex: 1 1 auto;
+  }
+}
+
+.three-image-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.three-image-row img {
+  width: 100%;                       /* each image fills its column */
+  max-width: 500px;                  /* adjust this number to control size */
+  height: auto;
+  border-radius: 4px;                /* optional */
+}
+
+.image-with-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 30%;        /* each gets ~30% of the row */
+}
+
+.image-with-caption img {
+  width: 100%;
+  max-width: none;       /* no artificial 300px limit */
+  height: auto;
+}
+
+.image-with-caption p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;                 /* softer caption color */
+}
+
+/* Overlay background */
+.image-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  z-index: 9999;
+}
+
+/* Enlarged image styles */
+.image-lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.section-header {
+  font-size: 2rem;        /* Bigger than normal text */
+  font-weight: 700;         /* Bold */
+  margin-top: 3rem;         /* Space above the header */
+  margin-bottom: 1rem;      /* Space below */
+  color: #ffffff;              /* Match your text theme */
+  letter-spacing: 0.5px;    /* (Optional) Slightly refined look */
+}
+
+
+.analysis-subsection {
+  margin: 3rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid #ddd;   /* visually separated sections */
+}
+
+.analysis-subtitle {
+  font-size: 1.3rem;            /* smaller than .section-header, bigger than body */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.analysis-subsection .three-image-row {
+  margin-bottom: 1.5rem;        /* space between images and text */
+}
+
+.analysis-text {
+  font-size: 1.0rem;            /* you can bump this if you want */
+  line-height: 1.7;
+}

@@ -1,6 +1,6 @@
 ---
 layout: project
-title: System Dynamics Final Project
+title: System Dynamics
 description: Control laws in non-linear and higher order systems 
 technologies: [Thermodynamics]
 image: /assets/images/heat_exchanger.jpeg
@@ -13,3 +13,5 @@ The hot stream enters the heat exchanger at high temperature, flows along its pa
 We analyzed two different heat exchanger set ups: Parallel flow and Cross flow. 
 
 ![Heat Exchanger Diagram and Calculations]({{ "/assets/images/heat_exchanger_diagram.png" | relative_url }}){: .inline-image-r style="width: 200px"}
+
+<div style="clear: both;"></div>

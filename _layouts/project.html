@@ -13,3 +13,32 @@ layout: default
 <a href={{ "/projects/" | relative_url }} class="back-arrow">
     <i class="bi bi-arrow-left-circle-fill"></i> Back to Projects
 </a>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Create overlay div
+  const overlay = document.createElement("div");
+  overlay.classList.add("image-lightbox-overlay");
+  document.body.appendChild(overlay);
+
+  const overlayImg = document.createElement("img");
+  overlay.appendChild(overlayImg);
+
+  // Add click behavior to enlargeable images
+  document.querySelectorAll(".enlargeable").forEach(img => {
+    img.style.cursor = "zoom-in";
+
+    img.addEventListener("click", () => {
+      overlayImg.src = img.src;
+      overlay.style.display = "flex";
+    });
+  });
+
+  // Close overlay on click
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+  });
+
+});
+</script>
