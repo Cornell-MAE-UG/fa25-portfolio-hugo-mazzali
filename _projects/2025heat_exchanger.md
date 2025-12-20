@@ -2,7 +2,7 @@
 layout: project
 title: Heat Exchanger
 description: Heat Exchanger Analysis for Thermodynamics 
-technologies: [Thermodynamics]
+technologies: [Thermodynamics, Heat Exchanger, Pumps]
 image: /assets/images/heat_exchanger.jpeg
 ---
 
@@ -12,6 +12,23 @@ The hot stream enters the heat exchanger at high temperature, flows along its pa
 
 We analyzed two different heat exchanger set ups: Parallel flow and Cross flow. 
 
-![Heat Exchanger Diagram and Calculations]({{ "/assets/images/heat_exchanger_diagram.png" | relative_url }}){: .inline-image-r style="width: 400px"}
+<div class="project-row">
+  <div class="project-text">
+    <p>
+      In parallel flow, the two streams enter the heat exchanger together, and flow in the same direction. This causes the system to have a large initial temperature difference, but provides little effectiveness regarding the purpose of the heat exchanger.
+    </p>
+    <p>
+      In cross flow, the fluids move in opposite directions. Given the data of this experiment, we found that this flow-orientation was more effective for exchanging heat between the two fluids. We characterized the effectiveness by comparing both the temperature difference as well as the time taken for the temperature to change.
+    </p>
+  </div>
+
+  <div class="project-image">
+    <img
+      src="{{ "/assets/images/heat_exchanger_diagram.png" | relative_url }}"
+      alt="Torque wrench engineering drawing"
+    >
+  </div>
+</div>
+
 
 <div style="clear: both;"></div>
