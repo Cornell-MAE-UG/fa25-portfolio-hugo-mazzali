@@ -20,7 +20,7 @@ I am an aspiring engineering student with a strong foundation in automotive desi
 #### Education
 - **Cornell University**  
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.3/4.0 | Graduation: May, 2027
+  | Graduation: May, 2027
 
 - **[Corning Painted Post High School]**  
   *Mastery in Mathematics and Science*  
@@ -37,17 +37,22 @@ I am an aspiring engineering student with a strong foundation in automotive desi
 ---
 
 #### Projects
-- **[Baja SAE Steering Column and Tie Rods]**:  
+- **Baja SAE Steering Column and Tie Rods**:  
   *[Short Description]*  
   - Key Achievement 1  
   - Key Achievement 2  
 
-- **[Baja SAE Front Suspension A-Arm Linkages]**:  
+- **Baja SAE Front Suspension A-Arm Linkages**:  
   *[Short Description]*  
   - Key Achievement 1  
   - Key Achievement 2  
 
-- **[Honda CX 500]**:  
+- **Honda CX 500 Restoration**:  
+  *[Short Description]*  
+  - Key Achievement 1  
+  - Key Achievement 2  
+
+- **Vintage Supra Road Bike Restoration**:  
   *[Short Description]*  
   - Key Achievement 1  
   - Key Achievement 2  

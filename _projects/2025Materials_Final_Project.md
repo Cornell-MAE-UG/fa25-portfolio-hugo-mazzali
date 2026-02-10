@@ -23,7 +23,7 @@ Below I summarize each design change and analysis results.
 <div class="project-row">
   <div class="project-text">
     <p>
-      My first iteration on the base design was changing the material to 304 stainless steel. Though hand calculations using the material properties of this allow of steal, I was able to find square cross section that was smaller than the baseline design while still adhering the design requirments of safety factors and strain gauge outputs.
+      My first iteration on the base design was changing the material to 304 stainless steel. Through hand calculations using the material properties of this allow of steal, I was able to find square cross section that was smaller than the baseline design while still adhering the design requirments of safety factors and strain gauge outputs.
     </p>
     <p>
       The stainless steel was chosen as the material due to its strenth in yeilding, density, and material properties relating to rusting.
@@ -59,7 +59,7 @@ Below I summarize each design change and analysis results.
 <div class="project-row">
   <div class="project-text">
     <p>
-      I decided to make my final design a a primary geometry of a circular cross section, with the drive place on a flat section with ample fillet area at the end. 
+      I decided to make my final design have a primary geometry of a circular cross section, with the drive place on a flat section with ample fillet area at the end. 
 
     </p>
     <p>

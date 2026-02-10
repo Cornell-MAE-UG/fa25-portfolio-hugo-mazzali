@@ -29,6 +29,9 @@
             <li class="nav-item">
               <a class="nav-link {% if page.url == '/cv/' %}active{% endif %}" href="{{ "/cv/" | relative_url }}">CV</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link {% if page.url == '/art/' %}active{% endif %}" href="{{ "/art/" | relative_url }}">Art</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -36,13 +39,13 @@
   </header>
   
   
-  <main class="container">
+  <main class="container main-wrap">
     {{ content }}
   </main>
 
   <footer class="footer navbar-dark text-white text-center";>
     <div class="container">
-      &copy; 2024 {{ site.name }}. All rights not reserved.
+      &copy; 2026 {{ site.name }}. All rights reserved.
     </div>
   </footer>
 

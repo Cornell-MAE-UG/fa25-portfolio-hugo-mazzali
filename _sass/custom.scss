@@ -1,26 +1,51 @@
+/* ==========================================================================
+   0) THEME TOKENS (colors + core variables)
+   Edit these to change the whole site palette.
+   ========================================================================== */
+
 // Default to light theme
 $primary-color: #3a3f58;
 $background-color: #f7f8fa;
 $text-color: #333;
 
-// Set theme colors based on the color_scheme variable
-@if $color_scheme == 'dark' {
-  $primary-color: #333;
-  $background-color: #000;
-  $text-color: #fff;
-} @else if $color_scheme == 'aqua' {
-  $primary-color: #598392;
-  $background-color: #eff6e0;
-  $text-color: #01161e;
-} @else if $color_scheme == 'desert' {
-  $primary-color: #925959;
-  $background-color: #f6f1e0;
-  $text-color: #1e0101;
+/* -------- Site palette -------- */
+$ink:   #0D0D0D;  // near-black
+$teal:  #618C84;
+$gold:  #F2BC57;
+$rust:  #8C2A14;
+$red:   #D92A1A;
+
+/* Base surfaces + text */
+$background-color: $ink;
+$text-color: #F2F2F2;          // readable on near-black
+$muted-text: rgba(242,242,242,0.75);
+
+/* Header/footer background */
+$primary-color: $ink;
+
+/* Use these for “danger / highlight” moments */
+.accent-red  { color: $red; }
+.accent-rust { color: $rust; }
+
+
+/* ==========================================================================
+   1) GLOBAL TYPOGRAPHY + BASE LAYOUT
+   (font sizes, heading sizes, body defaults)
+   ========================================================================== */
+
+html { font-size: 18px; }   /* global scale */
+
+body {
+  font-size: 1.15rem;       /* ~20–21px depending on browser */
+  line-height: 1.7;
 }
 
+h1 { font-size: 3rem; margin-bottom: 22px; }  /* ~54px */
+h2 { font-size: 2.2rem; margin-bottom: 14px; }
+h3 { font-size: 1.6rem; }
 
 .navbar, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather', serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -29,22 +54,40 @@ h1 {
 }
 
 body {
-  font-family: "Open Sans", 'Montserrat', 'Helvetica Neue' sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.6;
   background-color: $background-color;
   color: $text-color;
   margin: 0;
   padding: 0;
+  font-weight: 700;
+  background:
+    radial-gradient(1200px 800px at 20% 0%, rgba(97,140,132,0.10), transparent 60%),
+    radial-gradient(1000px 700px at 90% 30%, rgba(242,188,87,0.08), transparent 55%),
+    $ink;
 }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 2rem 56px;  /* adds top/bottom breathing room */
+}
+
+
+/* ==========================================================================
+   2) HEADER / NAV / FOOTER
+   (top bar, nav links, footer text)
+   ========================================================================== */
 
 header, footer {
   padding: 10px 5px;
-  background: $primary-color;
-  color: $background-color;
+  background: transparent;
+  color: $text-color;
 }
 
 header {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
+  background: transparent;
 }
 
 footer {
@@ -53,11 +96,223 @@ footer {
   font-size: 0.9em;
 }
 
-.container {
-  max-width: 1100px;   /* 1000–1200px is a nice range */
-  margin: 0 auto;
-  padding: 0 2rem;
+.navbar {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background: transparent;
+  border-bottom: 2px solid rgba(97,140,132,0.7);
 }
+
+.navbar .navbar-brand {
+  color: $gold !important;
+}
+
+.navbar .navbar-brand:hover {
+  color: $gold !important;
+  opacity: 0.9;
+}
+
+.nav-link {
+  font-size: 1.05rem;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+}
+
+.navbar .nav-link {
+  color: rgba(242,242,242,0.82) !important;
+}
+
+.navbar .nav-link:hover {
+  color: $gold !important;
+}
+
+.navbar .nav-link.active {
+  color: $gold !important;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+
+/* ==========================================================================
+   3) GLOBAL LINKS + BUTTON BASE
+   (site-wide anchors + default .btn styles)
+   ========================================================================== */
+
+a {
+  color: $gold;
+  text-decoration-color: rgba(242,188,87,0.55);
+}
+
+a:hover {
+  color: $teal;
+  text-decoration-color: rgba(97,140,132,0.7);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: $background-color;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+
+/* ==========================================================================
+   4) HOME PAGE SECTIONS (3 scrolling sections)
+   (gold text cards, teal headings, rust/red buttons, dividers)
+   ========================================================================== */
+
+.home-section {
+  padding: 72px 0;
+  border-bottom: 2px solid rgba(97,140,132,0.65);
+}
+
+.home-section:last-child {
+  border-bottom: 2px solid rgba(97,140,132,0.65);
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 42px;
+  align-items: stretch;
+}
+
+.section-text{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.section-grid.reverse {
+  grid-template-columns: 1fr 360px;
+}
+
+.section-img {
+  width: 360px;
+  height: 540px;
+  border-radius: 18px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.45);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.section-img:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+}
+
+.section-text p,
+.section-text li {
+  font-size: 1.1rem;
+}
+
+.section-text h1,
+.section-text h2 {
+  color: $teal;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.section-card{
+  background: rgba(242,188,87,0.06); 
+  border: 2px solid $gold;
+  border-radius: 18px;
+  padding: 26px 26px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  color: $text-color; /* so text stays readable on dark background */
+}
+
+.section-card:hover{
+  transform: translateY(-2px);
+  transform: scale(+10px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+}
+
+
+.section-card a{
+  color: $gold;
+  text-decoration-color: rgba(242,188,87,0.55);
+}
+
+.section-card a:hover{
+  color: $teal;
+  text-decoration-color: rgba(97,140,132,0.7);
+}
+
+
+.section-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Buttons inside the home sections */
+.section-actions .btn {
+  background: $rust;
+  border: 1px solid $rust;
+  color: #fff;
+}
+
+.section-actions .btn:hover {
+  background: $red;
+  border-color: $red;
+  color: #fff;
+}
+
+/* If you use outline buttons anywhere */
+.section-actions .btn.btn-outline-light {
+  background: transparent;
+  border-color: rgba(242,242,242,0.55);
+  color: $text-color;
+}
+
+.section-actions .btn.btn-outline-light:hover {
+  background: rgba(97,140,132,0.18);
+  border-color: rgba(97,140,132,0.65);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .section-grid,
+  .section-grid.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .section-img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .home-section{
+  border-bottom: 0;
+  position: relative;
+}
+
+.home-section::after{
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 44px; /* matches your section padding; adjust if needed */
+  background: linear-gradient(
+    90deg,
+    rgba(97,140,132,0),
+    rgba(97,140,132,0.75),
+    rgba(97,140,132,0)
+  );
+}
+
+}
+
+
+/* ==========================================================================
+   5) PROJECTS LIST / PROJECT PAGE UTILITIES
+   (project list cards, images, back arrow, code highlight)
+   ========================================================================== */
 
 .project-item img {
   max-width: 100%;
@@ -70,15 +325,6 @@ footer {
   font-size: 1.25em;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  color: $background-color;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
 .highlight {
   background-color: #2d2d2d;
   color: #e0e0e0;
@@ -88,13 +334,33 @@ footer {
   overflow-x: auto;
 }
 
-.highlight .k { color: #c792ea; }
+.highlight .k  { color: #c792ea; }
 .highlight .nb { color: #82aaff; }
-.highlight .s { color: #c3e88d; }
+.highlight .s  { color: #c3e88d; }
 .highlight .mi { color: #f78c6c; }
-.highlight .c { color: #5c6370; }
-.highlight .p { color: #89ddff; }
-.highlight .o { color: #ff5370; }
+.highlight .c  { color: #5c6370; }
+.highlight .p  { color: #89ddff; }
+.highlight .o  { color: #ff5370; }
+
+.back-arrow {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #686d85;
+  text-decoration: none;
+  margin-bottom: 1em;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-arrow:hover {
+  color: #3a3f58;
+  transform: translateX(-4px);
+}
+
+
+/* ==========================================================================
+   6) FLOATING / INLINE IMAGES (legacy + project writeups)
+   ========================================================================== */
 
 .profile-image {
   float: left;
@@ -128,11 +394,16 @@ footer {
   }
 }
 
-.profile-image, .project-image {
+.profile-image,
+.project-image {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+/* ==========================================================================
+   7) PROJECT GALLERY GRID (project pages)
+   ========================================================================== */
 
 .gallery-container {
   display: flex;
@@ -153,8 +424,8 @@ footer {
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease;
-  max-width: 250px; 
-  max-height: 300px; 
+  max-width: 250px;
+  max-height: 300px;
 }
 
 .gallery-item img {
@@ -165,7 +436,6 @@ footer {
   object-position: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .gallery-item p {
@@ -179,7 +449,7 @@ footer {
 }
 
 .gallery-item:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .project-image {
@@ -187,19 +457,166 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.back-arrow {
-  display: inline-block;
-  font-size: 1.1em;
-  color: #686d85; 
-  text-decoration: none;
-  margin-bottom: 1em;
-  font-weight: bold;
-  transition: color 0.3s ease, transform 0.3s ease;
+
+/* ==========================================================================
+   8) ART PAGE (masonry grid + hover enlarge + lightbox)
+   ========================================================================== */
+
+.art-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 80px;
 }
 
-.back-arrow:hover {
-  color: #3a3f58; 
-  transform: translateX(-4px);
+.art-grid {
+  column-count: 4;
+  column-gap: 14px;
 }
 
+@media (max-width: 1100px) { .art-grid { column-count: 3; } }
+@media (max-width: 800px)  { .art-grid { column-count: 2; } }
+@media (max-width: 520px)  { .art-grid { column-count: 1; } }
+
+/* remove/disable this if you have it */
+.tile:hover img { transform: none; }
+
+/* make the whole tile grow by 5% */
+.tile {
+  transition: transform 180ms ease;
+  transform-origin: center;
+  position: relative;
+  border-radius: 16px;  /* change this number to taste */
+  overflow: hidden;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.tile img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 180ms ease, filter 180ms ease;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Mixed “Pinterest-ish” sizes */
+.tile.r1x1  img { aspect-ratio: 1 / 1; }
+.tile.r4x5  img { aspect-ratio: 4 / 5; }
+.tile.r3x4  img { aspect-ratio: 3 / 4; }
+.tile.r16x9 img { aspect-ratio: 16 / 9; }
+.tile.r9x16 img { aspect-ratio: 9 / 16; }
+
+/* Hover enlarge */
+.tile:hover { z-index: 5; }
+
+
+/* Lightbox */
+.no-scroll { overflow: hidden; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.72);
+  z-index: 9999;
+  padding: 24px;
+}
+
+.lightbox.is-open { display: flex; }
+
+.lightbox-img {
+  width: auto;
+  height: auto;
+  max-width: 90vw;   /* fills most of the screen */
+  max-height: 90vh;  /* fills most of the screen */
+  object-fit: contain; /* never crop */
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 34px;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  color: rgba(255,255,255,0.9);
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+
+/* ==========================================================================
+   9) LEGACY ABOUT WRAP (older about layout)
+   (safe to keep; not required for current homepage)
+   ========================================================================== */
+
+.about-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+.about-photo {
+  float: left;
+  width: 320px;        /* bigger image */
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 10px 28px 18px 0;  /* space so text wraps nicely */
+}
+
+.about-body {
+  font-size: 18px;     /* bigger text */
+  line-height: 1.55;
+}
+
+.about-body p {
+  margin: 0;
+}
+
+.clear { clear: both; }
+
+/* Mobile: stop wrapping and stack */
+@media (max-width: 800px) {
+  .about-photo {
+    float: none;
+    width: 240px;
+    height: 240px;
+    margin: 0 0 16px 0;
+    display: block;
+  }
+}
+
+body{
+  position: relative;
+}
+
+/* Parallax background layer */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  /* Use your palette for a subtle depth wash */
+  background:
+    radial-gradient(1200px 800px at 15% 5%, rgba(0, 255, 208, 0.14), transparent 100%),
+    radial-gradient(1000px 700px at 85% 25%, rgba(255, 166, 0, 0.1), transparent 100%),
+    radial-gradient(900px 650px at 55% 85%, rgba(255, 21, 0, 0.08), transparent 100%),
+    $ink;
+
+  /* Slight scale makes it feel “behind” */
+  transform: scale(1.03);
+}
 
