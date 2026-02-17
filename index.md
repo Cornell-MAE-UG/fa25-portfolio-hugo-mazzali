@@ -53,7 +53,7 @@ title: Hugo Mazzali
     </div>
 
     <!-- Change this image path to any image you want to represent your work -->
-    <img src="{{ '/assets/images/projects_preview.jpg' | relative_url }}" class="section-img" alt="Projects preview">
+    <img src="{{ 'assets\images\projects_preview.JPG' | relative_url }}" class="section-img" alt="Projects preview">
   </div>
 </section>
 
