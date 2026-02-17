@@ -13,7 +13,7 @@ title: Hugo Mazzali
       <p>
         Junior mechanical engineering student at Cornell University, passionate about automotive and aerospace design.
         Member of the Cornell Baja SAE Racing team, currently responsible for designing, analyzing, and manufacturing the front A-arm
-        suspension linkages. Strong experience with hands-on machining and mechanical design.
+        suspension linkages. Strong experience with hands-on machining, graphic and mechanical design.
       </p>
       <p>
         Email: <a href="mailto:hlm89@cornell.edu">hlm89@cornell.edu</a>
@@ -35,7 +35,7 @@ title: Hugo Mazzali
 <section class="home-section">
   <div class="section-grid reverse">
     <div class="section-text">
-      <h2>Work</h2>
+      <h2>Engineering Projects</h2>
       <div class="section-card">
       <p>
         Check out a selections of my work pertaining to Baja SAE and my engineering courses. Along with my academic works, you'll find some personal projects that explore various engineering principals in design, manufacturing, automation, and programing. 

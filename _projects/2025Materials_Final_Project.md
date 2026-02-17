@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Mechanics of Materials
+title: Torque Wrench Design
 description: Design, FEA, and iteration of a torque wrench
 technologies: [Mechanics of Materials and Solids, Ansys FEA, Solidworks CAD]
 image: /assets/images/RealCoverImage_FINAL_torque_wrench_3270.PNG
