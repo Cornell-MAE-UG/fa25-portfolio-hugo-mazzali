@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Heat Exchanger
+title: Heat Exchanger Analysis
 description: Heat Exchanger Analysis for Thermodynamics 
 technologies: [Thermodynamics, Heat Exchanger, Pumps]
 image: /assets/images/heat_exchanger.jpeg

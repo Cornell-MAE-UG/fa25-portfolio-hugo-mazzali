@@ -19,7 +19,7 @@ I am an aspiring engineering student with a strong foundation in automotive desi
 
 #### Education
 - **Cornell University**  
-  *Bachelor of Science in Mechanical and Aerospace Engineering | GPA: 3.2*  
+  *Bachelor of Science in Mechanical and Aerospace Engineering*  
   graduation: May, 2027
 
 - **Corning Painted Post High School**  
