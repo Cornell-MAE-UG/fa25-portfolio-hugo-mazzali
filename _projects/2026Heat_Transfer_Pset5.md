@@ -8,7 +8,7 @@ image: assets\images\Heat_Transfer.png
 
 ---
 
- Download my Heat Transfer Problem Set 3 in PDF format [here.]({{ "assets\3240_Problem_Set_3.pdf" | relative_url }})
+ Download my System Dynamics final report in PDF format [here.]({{ "/assets/3240_Problem_Set_3.pdf" | relative_url }})
 
  This problem set explored heat transfer through various material composites with different modes of heat transfer and geometry. 
  
