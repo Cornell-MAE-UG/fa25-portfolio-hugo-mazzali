@@ -1,6 +1,6 @@
 # Portfolio Instructions
 
-PORTFOLIO LINK::::: https://cornell-mae-ug.github.io/fa25-portfolio-hugo-mazzali/projects/2025Materials_Final_Project/
+PORTFOLIO LINK::::: https://cornell-mae-ug.github.io/fa25-portfolio-hugo-mazzali/
 
 This is a template for you to start building your professional portfolio. It is also part of your journey at MAE and will be reviewed, as needed, by your instructor and the Undergraduate Program Office.
 
